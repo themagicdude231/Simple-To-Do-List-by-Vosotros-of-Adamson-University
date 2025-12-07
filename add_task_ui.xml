@@ -1,0 +1,65 @@
+<!-- this also used for the udate interface para iwas redundancy -->
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+    <!-- for name of task -->
+    <EditText
+        android:id="@+id/etTask_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Task_Name"
+        android:inputType="text" />
+    <!-- selecting the category of task -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Task_Category"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/rgTask_Category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbWorkSchool_Cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Work_School_Cat"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/rbPersonal_Cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Personal_Cat"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/rbOthers_Cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Others_Cat"
+            android:textSize="10sp" />
+    </RadioGroup>
+    <!-- for the deadline of the task -->
+    <EditText
+        android:id="@+id/etTask_DeadLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Task_DeadLine"
+        android:clickable="true"/>
+    <!-- for the description of the task -->
+    <EditText
+        android:id="@+id/etTask_Desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Task_Description"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"/>
+</LinearLayout>
