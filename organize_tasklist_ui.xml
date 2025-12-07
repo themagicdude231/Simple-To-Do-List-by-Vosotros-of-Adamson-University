@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter List"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="By Category"
+        android:textSize="12sp"
+        android:layout_marginBottom="8dp"/>
+    <RadioGroup
+        android:id="@+id/rgFilterCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/rbWorkSchool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Only Work/School Tasks"/>
+        <RadioButton
+            android:id="@+id/rbPersonal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Only Personal Tasks"/>
+        <RadioButton
+            android:id="@+id/rbOthers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Only Other Tasks"/>
+        <RadioButton
+            android:id="@+id/rbAllTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show AllTask"/>
+    </RadioGroup>
+
+</LinearLayout>
