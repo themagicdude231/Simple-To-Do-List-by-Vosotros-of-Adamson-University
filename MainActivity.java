@@ -41,7 +41,7 @@ import androidx.core.app.NotificationManagerCompat;
 
 public class MainActivity extends AppCompatActivity {
     // declaration of elements and variable
-    private ExtendedFloatingActionButton fabOptions, fabOptionAddTask, fabOptionOrganizeTask, fabOptionNotifyTask;
+    private ExtendedFloatingActionButton fabOptions, fabOptionAddTask, fabOptionOrganizeTask, fabOptionNotifyTask, fabOptionAboutApp;
     private boolean isFabOptionsItemVisible;
     private View addDialog, orgListDialog;
     private EditText etTask_Name, etTask_DeadLine, etTask_Desc;
@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         dbHelper = new DbHelper(MainActivity.this);
         tvNoOgAct = findViewById(R.id.tvNoOgAct);
         fabOptionNotifyTask = findViewById(R.id.fabOptionNotifyTask);
+        fabOptionAboutApp = findViewById(R.id.fabOptionAboutApp);
     }
     // creating for the reaction of the button
     private void btnInteract(){
@@ -90,11 +91,13 @@ public class MainActivity extends AppCompatActivity {
                     fabOptionAddTask.show();
                     fabOptionOrganizeTask.show();
                     fabOptionNotifyTask.show();
+                    fabOptionAboutApp.show();
                     isFabOptionsItemVisible = true;
                 } else {
                     fabOptionAddTask.hide();
                     fabOptionOrganizeTask.hide();
                     fabOptionNotifyTask.hide();
+                    fabOptionAboutApp.hide();
                     isFabOptionsItemVisible = false;
                 }
             }
@@ -263,6 +266,16 @@ public class MainActivity extends AppCompatActivity {
                     notifBuild.setAutoCancel(true);
                     notifMng.notify(1001, notifBuild.build());
                 }
+            }
+        });
+        fabOptionAboutApp.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                AlertDialog.Builder notice = new AlertDialog.Builder(MainActivity.this);
+                notice.setTitle("Notice");
+                notice.setMessage("This app is created by sebastian vosotros of Adamson University a 3rd year student of BSIT at CCIT. this a personal project of studying android studio with java." +
+                        "but became a project to save time." + "if your gonna use this project as a insparation please give credits to the owner");
+                notice.setPositiveButton("I understand", null);
+                notice.create().show();
             }
         });
     }
